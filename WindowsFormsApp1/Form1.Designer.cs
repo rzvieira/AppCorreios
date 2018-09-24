@@ -58,21 +58,21 @@ namespace WindowsFormsApp1
                         driver.FindElement(By.Id("formTelaPgto")).Submit();
 
                         IWebElement username = driver.FindElement(By.Name("username"));
-                        username.SendKeys("mundofast");
+                        username.SendKeys("usuario");
 
                         IWebElement password = driver.FindElement(By.Name("password"));
-                        password.SendKeys("220100ra");
+                        password.SendKeys("senha");
 
                         driver.FindElement(By.ClassName("botao-principal")).Submit();
 
 
-                        //string num = "5162306322396965";
-                        //IWebElement numCartao = driver.FindElement(By.Name("numCartao"));
-                        //((IJavaScriptExecutor)driver).ExecuteScript(string.Format("document.getElementById('numCartao').value='{0}';", num));
-                        //numCartao.Click();
+                        string num = "123123321321321321";
+                        IWebElement numCartao = driver.FindElement(By.Name("numCartao"));
+                        ((IJavaScriptExecutor)driver).ExecuteScript(string.Format("document.getElementById('numCartao').value='{0}';", num));
+                        numCartao.Click();
 
                         IWebElement nomeCartao = driver.FindElement(By.Name("nomeCartao"));
-                        nomeCartao.SendKeys("ALEXANDRE AUGUSTO MOSSATO");
+                        nomeCartao.SendKeys("usuario cartao");
 
                         string data = "06/2019";
                         ((IJavaScriptExecutor)driver).ExecuteScript(string.Format("document.getElementById('expiraCartao').value='{0}';", data));
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
                         //expiraCartao.SendKeys("06/2019");
 
                         IWebElement cvcCartao = driver.FindElement(By.Name("cvcCartao"));
-                        cvcCartao.SendKeys("365");
+                        cvcCartao.SendKeys("555");
 
                         driver.FindElement(By.Id("formPayment")).Submit();
                         
